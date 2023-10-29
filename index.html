@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootGoal</title>
+    <link rel="icon" type="image/png" href="FootGoallgo.png">
+    <style>
+        body {
+            margin: 0;
+            background-color: #EFEFEF;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+        }
+        .dashboard {
+            display: flex;
+            justify-content: center;
+        }
+        .box1 {
+            background-color: red;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        .bt1 {
+            background-color: red;
+            border: none;
+            color: white;
+            height: 50px;
+            width: 120px;
+        }
+        .bt1:hover {
+            background-color: rgb(232, 49, 49);
+        }
+        .btd1 {
+            display: block;
+        }
+        .exd1 {
+            display: none;
+            background-color: red;
+            height: 140px;
+            width: 200px;
+            position: absolute;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .bt2 {
+            text-align: left;
+            background-color: white;
+            border: none;
+            color: black;
+            height: 40px;
+            width: 100%;
+        }
+        .bt2:hover {
+            background-color: #EE8C8C;
+        }
+        .ft1 {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        .txt1 {
+            font-size: 40px;
+        }
+        .txt2 {
+            font-size: 20px;
+            color: red;
+        }
+        .txt2:after {
+            color: red;
+        }
+        .aa1 {
+            display: flex;
+            align-items: center;
+        }
+        .smi {
+            display: flex;
+            align-items: center;
+        }
+        .smi1 {
+        height: 50px;
+        width: 70px;
+        border-radius: 25px;
+        border: none;
+        margin-left: 5px;
+        background-color: #D9D9D9;
+        }
+        .ft2 {
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;
+            margin-left: 4px;
+        }
+        .ft3 {
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        .txt3 {
+            font-size: 13px;
+        }
+        .aaa1 {
+            color: #747474;
+        }
+        .txt4 {
+            font-size: 25px;
+        }
+        .boss {
+            display: flex;
+            justify-content: space-between;
+        }
+        .main-content {
+            width: 68%
+        }
+        .rs1 {
+            width: 30%;
+        }
+        .rsm {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 100%;
+            height: 100%;
+            background-color: #F5F5F5;
+            display: block;
+        }
+        @media(max-width:633px) {
+            .rs1 {
+                display: none;
+            }
+            .main-content {
+                width: 100%;
+            }
+        }
+        .txt5 {
+            font-size: 40px;
+            margin-left: 5px;
+        }
+        .txt6 {
+            font-size: 15px;
+            color: #246292;
+        }
+        .ba2 {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+        }
+        .ttf{
+            display: none;
+            background-color: #E8E8E8;
+            height: 70px;
+            align-items: center;
+            justify-content: right;
+        }
+        .f1 {
+            background-color: #E8E8E8;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+        .txt7 {
+            font-size: 25px;
+            margin-left: 5px;
+            margin-right: auto;
+            
+        }
+        .gb {
+            margin-left: 5px;
+            background-color: #E8E8E8;
+            color: green;
+            font-weight: bolder;
+            border: 2px solid green;
+            border-radius: 10px;
+            height: 40px;
+            width: 100px; 
+        }
+        .gb:hover {
+            color: #E8E8E8;
+            background-color: green;
+        }
+        .bb {
+            margin-left: 5px;
+            background-color: #E8E8E8;
+            color: red;
+            font-weight: bolder;
+            border: 2px solid red;
+            border-radius: 10px;
+            height: 40px;
+            width: 100px; 
+        }
+        .bb:hover {
+            color: #E8E8E8;
+            background-color: red;
+        }
+        .tum {
+            background-color: #E8E8E8;
+            color: darkblue;
+            font-weight: bolder;
+            border: 2px solid darkblue;
+            border-radius: 10px;
+            height: 40px;
+            width: 100px; 
+        }
+        .tum:hover {
+            color: #E8E8E8;
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <div class="logo">
+        <img src="FootGoallgo.png" height="210">
+    </div>
+    <div class="dashboard">
+        <div class="box1">
+            <button class="bt1">Home</button>
+            <div class="btd1">
+             <button class="bt1" onmouseover="show1()" onmouseout="hide1()">Explore</button>
+             <br>
+             <div class="exd1" onmouseover="show1()" onmouseout="hide1()" id="db1">
+                <button class="bt2">Upcoming stars</button><br>
+                <button class="bt2">Fc player ratings</button><br>
+                <button class="bt2">Best of Ucl</button><br>
+                <button class="bt2">More.......</button><br>
+             </div>
+            </div>
+            <button class="bt1">News</button>
+            <button class="bt1">About us</button>
+            <button class="bt1">Contact</button>
+        </div>
+    </div><br><br><br>
+    <div class="aa1"><a class="ft1 txt1">How are Fifa rating decided</a><div class="smi"><button class="smi1"><img src="Twitter.png" height="20"></button><button class="smi1"><img src="Facebook.png" height="40"></button></div></div><br>
+    <a class="ft1 txt2" href="https://www.goal.com/en-in/news/fifa-player-ratings-explained-how-are-the-card-number--stats-decided/1hszd2fgr7wgf1n2b2yjdpgynu">By Ronan Murphy(modified)</a><br><br>
+    <img src="https://tse3.mm.bing.net/th?id=OIP.pNyhT8W7VWlgBcOG0ITkLgHaEK&pid=Api&P=0&h=180" height="200" style="margin-left: 3px;"><br>
+    <a class="ft2 txt3 aaa1">Image credit:<a href="https://www.youtube.com/watch?v=xX9NmqDa1Fc" class="ft2 txt3">Austor</a></a><br><br>
+    <div class="boss"><div class="main-content"><a class="ft3 txt4">So,how are fifa ratings decided?Are they guessed or a certain formulae is used?<br><br>So, Each year, with the launch of every new FIFA game, EA Sports releases <span style="background-color: #B872E7;">the top 100 ratings for the best players in the game</span>, as well as the complete database of ratings for every single player from all the licensed leagues.<br><br><span style="background-color:#B872E7;">The top 100 list always provides for plenty of debate from fans,</span> with FIFA 20 rating Lionel Messi as 94 overall and Cristiano Ronaldo at 93, leading to a lot of social media arguments between fans of both players.Everyone has an opinion on the best players in the game and whether certain stars are under, or overrated, but how do EA Sports decide the ratings for all the lesser-known players in their database?<br><br>EA Sports employs a team of <span style="background-color: #B872E7;">25 EA Producers</span> and <span style="background-color: #B872E7;">400 outside data contributors,</span> who are led by Head of Data Collection & Licensing Michael Mueller-Moehring. This team is responsible for ensuring all player data is up to date, while a community of over 6,000 FIFA Data Reviewers or Talent Scouts from all over the world are constantly providing suggestions and alterations to the database.<br><br><br><span class="ft1 txt1">What are Fifa Talent Scouts?<br>
+    <br></span>It would be impossible for EA Sports' staff to watch every single player in every single game, so a team of over <span style="background-color: #B872E7;">6,000 volunteers</span> help <span style="background-color:#B872E7">maintain and update the player database all year round.</span> These FIFA Data Reviewers are known as FIFA Talent Scouts and are coaches, scouts and football fans whose local knowledge helps maintain accuracy and ensure there are no major inconsistencies in each version of FIFA.<br><br>Sorry,more info coming soon!!</a>
+    </div><div class="rs1"><div class="rsm"><br><a class="ft2 txt5">Popular searches</a>
+    <br><br><div class="ba2"><a href="" class="ft2 txt6"><img src="https://tse3.mm.bing.net/th?id=OIP.ZOzxdkKJYa_6I39d82X2JAAAAA&pid=Api&P=0&h=180" height="20" style="margin-right: 5px;">Who's better?Messi or Ronaldo</a></div><br>
+    <div class="ba2"><a href="" class="ft2 txt6"><img src="https://tse3.mm.bing.net/th?id=OIP.ZOzxdkKJYa_6I39d82X2JAAAAA&pid=Api&P=0&h=180" height="20" style="margin-right: 5px;">Is Ea Fc better than Efootball?</a></div><br>
+    <div class="ba2"><a href="" class="ft2 txt6"><img src="https://tse3.mm.bing.net/th?id=OIP.ZOzxdkKJYa_6I39d82X2JAAAAA&pid=Api&P=0&h=180" height="20" style="margin-right: 5px;">Best PL starting XI</a></div><br>
+    <div class="ba2"><a href="" class="ft2 txt6"><img src="https://tse3.mm.bing.net/th?id=OIP.ZOzxdkKJYa_6I39d82X2JAAAAA&pid=Api&P=0&h=180" height="20" style="margin-right: 5px;">Most expensive transfers</a></div><br>
+    <div class="ba2"><a href="" class="ft2 txt6"><img src="https://tse3.mm.bing.net/th?id=OIP.ZOzxdkKJYa_6I39d82X2JAAAAA&pid=Api&P=0&h=180" height="20" style="margin-right: 5px;">Best younsters right now</a></div><br>
+    <div class="ba2"><a href="" class="ft2 txt6"><img src="https://tse3.mm.bing.net/th?id=OIP.ZOzxdkKJYa_6I39d82X2JAAAAA&pid=Api&P=0&h=180" height="20" style="margin-right: 5px;">Best Fifa cards in history?</a></div><br>
+    <div class="ba2"><a href="" class="ft2 txt6"><img src="https://tse3.mm.bing.net/th?id=OIP.ZOzxdkKJYa_6I39d82X2JAAAAA&pid=Api&P=0&h=180" height="20" style="margin-right: 5px;">How is puskas award decided?</a></div><br>
+    </div></div></div>
+    <br><div class="feedback">
+        <div class="f1" id="aa"><a class="ft1 txt7">How was the article?</a><button class="gb" onclick="ga()">Good</button><button class="bb" onclick="ba()">Bad</button></div>
+        <div class="ttf" id="bb"><a class="ft1 txt7">Thanks for your feedback!!</a><button class="tum" onclick="email()">Tell us more</button></div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"> 
+  </script>
+    <script>
+        function show1() {
+           document.getElementById("db1").style.display = "block";
+        }
+        function hide1() {
+           document.getElementById("db1").style.display = "none";
+        }
+        function ga() {
+            document.getElementById("aa").style.display = "none";
+            document.getElementById("bb").style.display = "flex";
+    } 
+    function ba() {
+            document.getElementById("aa").style.display = "none";
+            document.getElementById("bb").style.display = "flex";
+    } 
+
+        function email() {
+            window.location.href = "mailto:sarthakraymondal.slsn5a@gmail.com"
+        }
+    </script>
+</body>
+</html>
